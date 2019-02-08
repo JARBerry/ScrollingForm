@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  ScrollingForm
 //
-//  Created by Ray Berry on 04/12/2018.
+//  Created by James and Ray Berry on 04/12/2018.
 //  Copyright © 2018 JARBerry. All rights reserved.
 //
 
@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     }
 
     
-
+ // bring up keyboard
     func registerForKeyboardNotifications() {
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -39,7 +39,8 @@ class ViewController: UIViewController {
         } else {
             scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardViewEndFrame.height, right: 0)
         }
-        
+   
+        // provide scroll view
         scrollView.scrollIndicatorInsets =  scrollView.contentInset
         
     }
